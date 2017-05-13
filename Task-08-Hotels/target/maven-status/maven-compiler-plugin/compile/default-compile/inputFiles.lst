@@ -1,0 +1,11 @@
+E:\_MovaviTemporary\VaadinProject\Task-04-Hotels\src\main\java\com\demo\app\hotel\entities\Hotel.java
+E:\_MovaviTemporary\VaadinProject\Task-04-Hotels\src\main\java\com\demo\app\hotel\ui\MainUI.java
+E:\_MovaviTemporary\VaadinProject\Task-04-Hotels\src\main\java\com\demo\app\hotel\services\CategoryService.java
+E:\_MovaviTemporary\VaadinProject\Task-04-Hotels\src\main\java\com\demo\app\hotel\converters\IntegerRatingToStringConverter.java
+E:\_MovaviTemporary\VaadinProject\Task-04-Hotels\src\main\java\com\demo\app\hotel\ui\EditCategoryForm.java
+E:\_MovaviTemporary\VaadinProject\Task-04-Hotels\src\main\java\com\demo\app\hotel\ui\EditHotelForm.java
+E:\_MovaviTemporary\VaadinProject\Task-04-Hotels\src\main\java\com\demo\app\hotel\converters\DateToWorkedDaysConverter.java
+E:\_MovaviTemporary\VaadinProject\Task-04-Hotels\src\main\java\com\demo\app\hotel\ui\HotelForm.java
+E:\_MovaviTemporary\VaadinProject\Task-04-Hotels\src\main\java\com\demo\app\hotel\entities\HotelCategory.java
+E:\_MovaviTemporary\VaadinProject\Task-04-Hotels\src\main\java\com\demo\app\hotel\services\HotelService.java
+E:\_MovaviTemporary\VaadinProject\Task-04-Hotels\src\main\java\com\demo\app\hotel\ui\CategoryForm.java

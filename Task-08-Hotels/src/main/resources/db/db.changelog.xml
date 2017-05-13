@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+	 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+	<changeSet id="init" author="cherepov">
+		<createTable tableName="HOTEL">
+			<column name="ID" type="BIGINT" autoIncrement="true">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="OPTLOCK" type="BIGINT" />
+			<column name="NAME" type="VARCHAR(255)" />
+			<column name="ADDRESS" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="RATING" type="INT">
+				<constraints nullable="false" />
+			</column>
+			<column name="OPERATES_FROM" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="CATEGORY" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="URL" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+		<createTable tableName="CATEGORY">
+			<column name="ID" type="INT" autoIncrement="true">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="OPTLOCK" type="BIGINT" />
+			<column name="NAME" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+		<rollback>
+			<dropTable tableName="HOTEL" />
+			<dropTable tableName="CATEGORY" />
+		</rollback>
+	</changeSet>
+
+	<changeSet id="HOTEL_UPDATE" author="cherepov">
+		<addColumn tableName="HOTEL">
+			<column name="DESCRIPTION" type="TEXT" />
+		</addColumn>
+		<rollback>
+			<dropColumn tableName="HOTEL" columnName="DESCRIPTION" />
+		</rollback>
+	</changeSet>
+
+	<changeSet id="CATEGOTY_UPDATE" author="cherepov">
+		<modifyDataType tableName="HOTEL" columnName="CATEGORY"
+			newDataType="INT" />
+		<addForeignKeyConstraint constraintName="HOTEL_CATEGORY"
+			baseTableName="HOTEL" baseColumnNames="CATEGORY" referencedTableName="CATEGORY"
+			referencedColumnNames="ID" onDelete="SET NULL" />
+		<rollback>
+			<dropForeignKeyConstraint baseTableName="HOTEL"
+				constraintName="HOTEL_CATEGORY" />
+			<dropIndex tableName="HOTEL" indexName="HOTEL_CATEGORY" />
+			<modifyDataType tableName="HOTEL" columnName="CATEGORY"
+				newDataType="VARCHAR(255)" />
+			<addNotNullConstraint tableName="HOTEL"
+				columnName="CATEGORY" columnDataType="VARCHAR(255)" />
+		</rollback>
+	</changeSet>
+</databaseChangeLog>

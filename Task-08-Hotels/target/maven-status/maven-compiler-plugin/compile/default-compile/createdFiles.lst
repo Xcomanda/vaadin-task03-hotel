@@ -1,0 +1,17 @@
+com\demo\app\hotel\entities\Hotel.class
+com\demo\app\hotel\entities\HotelCategory.class
+com\demo\app\hotel\ui\HotelForm.class
+com\demo\app\hotel\services\CategoryService.class
+com\demo\app\hotel\ui\MainUI$2.class
+com\demo\app\hotel\ui\MainUI$MyUIServlet.class
+com\demo\app\hotel\ui\CategoryForm.class
+com\demo\app\hotel\services\CategoryService$1.class
+com\demo\app\hotel\services\HotelService$1.class
+com\demo\app\hotel\ui\EditCategoryForm.class
+com\demo\app\hotel\converters\IntegerRatingToStringConverter.class
+com\demo\app\hotel\ui\EditHotelForm.class
+com\demo\app\hotel\ui\MainUI$1.class
+com\demo\app\hotel\converters\DateToWorkedDaysConverter.class
+com\demo\app\hotel\ui\MainUI.class
+com\demo\app\hotel\services\HotelService.class
+com\demo\app\hotel\services\HotelService$2.class
